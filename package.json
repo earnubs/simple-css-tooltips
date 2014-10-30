@@ -1,0 +1,32 @@
+{
+  "name": "simple-css-tooltips",
+  "version": "1.0.0",
+  "description": "Simple CSS Tooltips",
+  "main": "tt.css",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.9",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-csso": "^0.2.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/earnubs/simple-css-tooltips.git"
+  },
+  "keywords": [
+    "CSS",
+    "tooltips"
+  ],
+  "author": {
+    "name": "Stephen Stewart",
+    "email": "stephen.stewart@canonical.com"
+  },
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/earnubs/simple-css-tooltips/issues"
+  },
+  "homepage": "https://github.com/earnubs/simple-css-tooltips"
+}
