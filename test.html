@@ -7,9 +7,51 @@
     font: italic bold 13px/1.5 sans-serif;
     text-shadow: 0px 2px 0px lime;
   }
+
+  .container {
+    width:400px;
+    margin:0 auto;
+  }
+
+  .box {
+    float:left;
+    width:100px;
+    height:100px;
+    background:#ccc;
+  }
+  .box + .box {
+    background:#aaa;
+  }
+  .box + .box + .box {
+    background:#888;
+  }
+  .box + .box + .box + .box {
+    background:#666;
+  }
+
+  .box > [data-tt] {
+    width:100px;
+    height:100px;
+  }
+
 </style>
 <link rel=stylesheet href=tt.css />
 <p>Northerly positioned <a class="tt-n" data-tt="This is the northerly tooltip (.tt-n)." href="#">tooltip</a>.
 <p>Easterly positioned <a class="tt-e" data-tt="This is the easterly tooltip (.tt-e)." href="#">tooltip</a>.
 <p>Southerly positioned  (default) <a data-tt="This is the default tooltip." href="#">tooltip</a>.
 <p>Westerly positioned <a class="tt-w" data-tt="Westerly tooltip (.tt-w)." href="#">tooltip</a>.
+
+<div class="container">
+  <div class="box">
+    <div class="tt-n" data-tt="Northerly"></div>
+  </div>
+  <div class="box">
+    <div class="tt-e" data-tt="Easterly"></div>
+  </div>
+  <div class="box">
+    <div data-tt="Southerly (default)"></div>
+  </div>
+  <div class="box">
+    <div class="tt-w" data-tt="Westerly"></div>
+  </div>
+</div>
