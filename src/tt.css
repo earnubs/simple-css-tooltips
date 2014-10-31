@@ -10,6 +10,12 @@
   top:100%;
   transition:all 0.2s ease-out 100ms;
   z-index:1000000;
+  /** inherit font-size and line-height, but not these **/
+  border:none;
+  text-decoration:none;
+  text-shadow:none;
+  font-style:normal;
+  font-weight:300;
 }
 
 /** tooltip body **/
@@ -19,7 +25,6 @@
   color:#ddd;  
   border-radius:3px;
   padding:0.3em 0.6em;
-  text-align:center;
   white-space:nowrap;
 }
 

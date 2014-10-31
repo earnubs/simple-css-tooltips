@@ -9,4 +9,9 @@ gulp.task('build', function() {
   .pipe(gulp.dest('.'));
 });
 
+gulp.task('watch', function() {
+  gulp.watch('src/*.css', ['default']);
+});
+
 gulp.task('default', ['build']);
+
