@@ -10,8 +10,9 @@
   top:100%;
   transition:all 0.2s ease-out 100ms;
   z-index:1000000;
-  /** inherit font-size and line-height, but not these **/
   border:none;
+  font-size:13px;
+  line-height:13px;
   text-decoration:none;
   text-shadow:none;
   font-style:normal;
@@ -24,7 +25,7 @@
   background:rgb(51,51,51);
   color:#ddd;  
   border-radius:3px;
-  padding:0.3em 0.6em;
+  padding:9px 13px;
   white-space:nowrap;
 }
 
@@ -41,7 +42,7 @@
 [data-tt]:hover::before, [data-tt]:hover::after {
   visibility:visible;
   opacity:1;
-  transform: translateY(8px);
+  transform: translateY(10px);
 }
 
 /** position N, S, E or West of content based on class **/
@@ -49,13 +50,18 @@
   top:auto;
   bottom:100%;
 }
+.tt-e::before, .tt-e::after,
+.tt-w::before, .tt-w::after {
+  top:50%;
+}
 .tt-e::before, .tt-e::after {
-  top:0;
   left:100%;
 }
 .tt-w::before, .tt-w::after {
-  top:0;
   right:100%;
+}
+.tt-e::before, .tt-w::before {
+  margin-top:-16px; /** half height of tt **/
 }
 
 .tt-n::after {
@@ -64,27 +70,26 @@
   margin:0 0 -10px 0;
   left:50%;
 }
-.tt-e::after {
+.tt-e::after, .tt-w::after {
   border-color:transparent;
-  border-right-color:#333;
-  margin:0 0 0 -10px;
   left:auto;
-  top:50%;
+  margin-top:-5px; /** border size * 1 **/
+}
+.tt-e::after {
+  border-right-color:#333;
+  margin-left: -10px; /** border size * 2 **/
 }
 .tt-w::after {
-  border-color:transparent;
   border-left-color:#333;
-  margin:0 -10px 0 0;
-  left:auto;
-  top:50%;
+  margin-right: -10px; /** border size * 2 **/
 }
 .tt-n:hover::before,.tt-n:hover::after {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
 }
 .tt-e:hover::before, .tt-e:hover::after {
-  transform: translateX(8px);
+  transform: translateX(10px);
 }
 .tt-w:hover::before, .tt-w:hover::after {
-  transform: translateX(-8px);
+  transform: translateX(-10px);
 }
 
